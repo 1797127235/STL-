@@ -178,11 +178,6 @@ namespace tiny {
             _data[_size] = '\0';
         }
 
-        //扩容
-        void reserve(size_t n)
-        {
-            if (n > _capacity) grow_(n);
-        }
 
         void resize(size_t n, char ch = '\0')
         {
@@ -325,5 +320,4 @@ namespace tiny {
     {
         return string(lhs) + rhs;
     }
-
 }
