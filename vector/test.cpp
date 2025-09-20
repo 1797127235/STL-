@@ -126,7 +126,7 @@ void test_string()
     }
     // 输出:
     // Apple
-    // Banana
+    // Banana 
     // Cherry
 
     // 测试9：查找特定元素
