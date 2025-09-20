@@ -174,6 +174,14 @@ namespace tiny {
             return *this;
         }
 
+        void clear()
+        {
+            for (Iterator ptr = _start; ptr != _finish; ++ptr) {
+                ptr->~T();  // 显式调用析构函数
+            }
+            _finish = _start;
+        }
+
         void swap(vector<T>& v)
         {
             std::swap(_start, v._start);
